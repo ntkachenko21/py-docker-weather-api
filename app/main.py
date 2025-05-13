@@ -5,6 +5,7 @@ import requests
 BASE_URL = "http://api.weatherapi.com/v1/current.json"
 FILTERING = "Paris"
 
+
 def get_weather() -> None:
     api_key = os.environ.get("API_KEY")
 
@@ -29,6 +30,7 @@ def get_weather() -> None:
         )
     else:
         print(f"Error {response.status_code}: {response.text}")
+
 
 if __name__ == "__main__":
     get_weather()
